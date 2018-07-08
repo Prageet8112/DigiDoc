@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DigiDoc Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="Home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="aboutUs.css">
+</head>
+<style type="text/css">
+	body
+    {
+      background-image:url("images/Background_Image/pattern1.jpg");
+      width: 100%;
+      height: 100%; 
+    }
+    #backgroundImage
+    {
+     width: 100%;
+     height:100%;
+     /*background-image:url("wood.jfif");*/
+     /*background-color: #99203D;*/
+     /*background-color: white;*/
+     background-image:url("images/Background_Image/pattern1.jpg");
+    }
+  .toRight
+  {
+   padding-left:20px;
+   font-family: sans-serif;
+   font-size: 20px;
+  }
+  .nav-link{
+    color: #04203D;
+  }
+  .nav
+  {
+     margin-top:60px; 
+     font-family: sans-serif;
+  }
+</style>
+<body>
+	
+<!-- navigation bar-->
+<nav class="nav navbar navbar-expand-md navbar-light sticky-top" id="backgroundImage" style="margin-top: -100px;">
+      <!-- Logo of digiDoc -->
+      <a class="navbar-brand hideInitially" id="brandHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px;">DigiDoctor</a>
+      <a class="navbar-brand" id="imageHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px; "><img src="images/Header/logo.png"></a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       
+     <!-- NavigationBar links -->
+      <div class="nav collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav" id="navLinks">
+          <li class="nav-item toRight"><a class="nav-link" href="Home.html" style="color:#04203D;"><strong>Home</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="aboutUs.html" style="color:#04203D;"><strong>About Us</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="#serviceRedirect" style="color:#04203D;"><strong>Services</strong></a></li>
+          <li class="nav-item dropdown toRight">
+          <a class="nav-link dropdown-toggle" href="host.html#pricing" id="navbardrop" data-toggle="dropdown" style="color:#04203D;"><strong>Buy a Plan</strong></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Health Package</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Annual Membership</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Corporate Health</a>
+          </div>
+        </li>
+          <li class="nav-item toRight"><a class="nav-link" href="#footer" style="color:#04203D;"><strong>Contact Us</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="LoginForm.html" style="color:#04203D;"><strong>Login</strong></a></li>
+        </ul>
+      </div> 
+    </nav>
+
+    <script>
+    window.onscroll = function() {scrollEffect()};
+    function scrollEffect() {
+      var element1=document.getElementById("imageHide");
+      var element2=document.getElementById("brandHide");
+      var element3=document.getElementById("backgroundImage");
+      var element4=document.getElementById("navLinks");
+        if (document.body.scrollTop <= 20 && document.documentElement.scrollTop <= 20) {
+           
+           
+          element2.classList.add("hideBrand");
+          element1.classList.remove("hideImage");
+            element2.classList.remove("hideInitially");
+            element3.classList.remove("navbarHeightAdjust");
+            element4.classList.remove("navLinksAdjust");
+           
+            
+        }
+         else if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+           element1.classList.add("hideImage");
+            element3.classList.add("navbarHeightAdjust");
+            element4.classList.add("navLinksAdjust");
+            element2.classList.remove("hideBrand");
+            element2.classList.remove("hideInitially");
+
+
+        }
+    }
+  </script>
+<!--Slider -->
+<div class="container-fluid">
+	
+	<div id="Slider" class="carousel slider" data-ride="carousel" style="padding: 0;margin: 0">
+		<ol class="carousel-indicators">
+    	  <li data-target="#Slider" data-slide-to="0" class="active"></li>
+    	  <li data-target="#Slider" data-slide-to="1"></li>
+    	  <li data-target="#Slider" data-slide-to="2"></li>
+    	</ol>
+
+	<div class="carousel-inner">
+
+	      <div class="carousel-item active">
+	        <img src="images/Home_Images/Slider_Images/doctor.jpg" alt="Los Angeles" style="width: 100%" style="padding: 0;margin: 0">
+	        <div class="carousel-caption">
+	          <h3>Picture 1</h3>
+	          <p>Content of Picture 1</p>
+	        </div>
+	      </div>
+
+	      <div class="carousel-item">
+	        <img src="images/Home_Images/Slider_Images/doctor1.jpg" alt="Chicago" style="width:100%;">
+	        <div class="carousel-caption">
+	          <h3>Picture 2</h3>
+	          <p>Content of Picture 2</p>
+	        </div>
+	      </div>
+	    
+	      <div class="carousel-item">
+	        <img src="images/Home_Images/Slider_Images/doctor2.jpg" alt="New York" style="width:100%;">
+	        <div class="carousel-caption">
+	          <h3>Picture 3 </h3>
+	          <p>Content of Picture 3</p>
+	        </div>
+	      </div>
+  
+    	</div>
+
+    	<a class="carousel-control-prev" href="#Slider" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		 </a>
+		 <a class="carousel-control-next" href="#Slider" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		 </a>
+	</div>
+</div>
+
+<!--Feature Section when Viewed on Desktop i.e. Mobile off-->
+<div class="mobileOff section bgimage"  id="serviceRedirect" style=" margin: 0; padding: 0;">
+       <div class="dropdown dropright">
+        <button type="button" class="btn btn-danger dropdown-toggle" id="rotate"  data-toggle="dropdown" style="margin-left: -7.8%;">
+         Book
+         your
+         appointments 
+         here
+        </button>
+      <div class="dropdown-menu" style="opacity:1;">
+          <a class="dropdown-item" id="sidebar" href="bookAnAppointment.html"><img src="images/Appointment_Images/bookAnAppointment.png" style="height:100px;"></a>
+          <a class="dropdown-item" id="sidebar" href="bookAHealthCheck.html"><img src="images/Appointment_Images/bookAHealthCheck.png" style="height:100px;"></a>
+          <a class="dropdown-item" id="sidebar" href="bookADiagnosticTest.html"><img src="images/Appointment_Images/pathologyButton.png" style="height:100px;"></a>
+         <a class="dropdown-item" id="sidebar" href="LoginForm.html"><img src="images/Appointment_Images/visitPatientPortal.png" style="height:100px;"></a>
+      </div>
+     
+  <div class="text-center" style=" padding-top: 45px; margin: 0;">
+    <div style="padding-bottom: 45px; margin-top: -200px!important; text-transform: uppercase; ">
+        <h2 style=" color: #04293D"><strong>Services</strong><br>
+	        <br><p class="line text-center" style="margin-left: 40%;margin-right:40%"></p>    	
+    </div>
+  </div>
+  <div class="container-fluid bgimage" style="margin-top: -5%">
+  <div class="row">
+    <div class="col-md-4 text-center" >
+      <img src="images/Home_Images/Services_Images/symptom.jpg"  style="margin-top: 40px ">
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26">Symptoms Checker</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can test symptoms for himself or can enter the details of the user
+            whom he would like to test the symptoms.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="images/Home_Images/Services_Images/appointment.jpg"  style="margin-top: 40px "><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Ask For Appointment</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can ask for doctor appointment He can set date to request for
+            appointment with the doctor, if the doctor will be available in the set date
+            then the appointment will get fixed otherwise patient will be suggested to
+            make appointment dates under doctors availability dates.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+       <img src="images/Home_Images/Services_Images/reminder.png" style="margin-top: 40px "><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Set Reminders</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can set the reminder for medicines prescribed by the Doctor.
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bgimage" >
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="images/Home_Images/Services_Images/customer.jpeg">
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Customer Care</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can make inquiry about general issues of the health using customer
+            support service.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="images/Home_Images/Services_Images/livechat.png"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Chat with Specialist</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can ask health questions directly to the expert doctors. Online doctor
+            will give quick answers in a minute.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+       <img src="images/Home_Images/Services_Images/vaccination.jpg"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Vaccination</p><br>
+        <p class="line" style="width: 100% ;"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            It is crafted especially for the parents to remember the important vaccination
+            dates and keep a track of the vaccination schedules for their newly born kids.
+            All they have to do is to set the birth date of the kid and then it will
+            automatically schedule the vaccine date for days and months.
+        </p>
+    </div>
+      
+  </div>
+</div>
+<div class="container-fluid bgimage" >
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="images/Home_Images/Services_Images/pharmacy.jpg">
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26; margin-top: 11%">DigiDoc Pharmacy</p><br>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            No need to run to the nearest pharmaceutical store to get your medicines.Purchase 100% genuine medicines from our in-house  authorised stores.  
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="images/Home_Images/Services_Images/ambulance.jpg"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26; margin-top: 11%">Ambulances</p><br>
+        <p class="line" style="width: 100% ; "></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Time is precious in case of emergency situations.Get our ambulance services on just the click of a button through the ambulance services.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+       <img src="images/Home_Images/Services_Images/homeNurse.jpg"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: #DC1F26;">Homenurses and Physiotherapists on Demand</p><br>
+        <p class="line" style="width: 100% ;"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Your wish is our Command.Get in touch with our team of expert physiotherapists and nurses directly from the platform.
+        </p>
+    </div>
+      
+  </div>
+</div>
+</div>  
+</div>
+
+<!--Feature Section when Viewed on Mobile i.e. Desktop off-->
+
+<div class="destopOff tabletOff section bgimage" style="background-color: white; margin: 0; padding: 0;">
+  <div class="dropdown dropright" style="margin-top: 5%">
+      <button type="button" class="btn btn-danger dropdown-toggle" id="rotate"  data-toggle="dropdown">
+       <span class="glyphicon glyphicon-print"></span>
+        Book
+        your
+        appointments 
+        here
+      </button>
+      <div class="dropdown-menu" style="opacity:1;">
+          <a class="dropdown-item" id="sidebar" href="bookAnAppointment.html"><img src="images/Appointment_Images/bookAnAppointment.png" style="height:100px;"></a>
+          <a class="dropdown-item" id="sidebar" href="bookAHealthCheck.html"><img src="images/Appointment_Images/bookAHealthCheck.png" style="height:100px;"></a>
+          <a class="dropdown-item" id="sidebar" href="bookADiagnosticTest.html"><img src="images/Appointment_Images/pathologyButton.png" style="height:100px;"></a>
+          <a class="dropdown-item" id="sidebar" href="LoginForm.html"><img src="images/Appointment_Images/visitPatientPortal.png" style="height:100px;"></a>
+      </div>
+     </div>
+  <div class="container-fluid" style="">
+    
+
+    <div id="mobileFeature1">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/symptom.jpg" alt="Image of Symptoms Checker" style="margin-top: 10%">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Symptoms Checker</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              Patient can test symptoms for himself or can enter the details of the user
+              whom he would like to test the symptoms.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>  
+    
+
+    <div id="mobileFeature2">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/appointment.jpg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Ask For Appointment</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              Patient can ask for doctor appointment He can set date to request for
+            appointment with the doctor, if the doctor will be available in the set date
+            then the appointment will get fixed otherwise patient will be suggested to
+            make appointment dates under doctors availability dates.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+
+    <div id="mobileFeature3">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/reminder.png" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Set Reminders</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              Patient can set the reminder for medicines prescribed by the Doctor.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+
+    <div id="mobileFeature4">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/customer.jpeg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Customer Care</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+             Patient can make inquiry about general issues of the health using customer
+            support service.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+
+    <div id="mobileFeature5">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/livechat.png" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Chat with Specialist</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+               Patient can ask health questions directly to the expert doctors. Online doctor
+            will give quick answers in a minute.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+
+    <div id="mobileFeature6">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/vaccination.jpg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Vaccination</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              It is crafted especially for the parents to remember the important vaccination
+            dates and keep a track of the vaccination schedules for their newly born kids.
+            All they have to do is to set the birth date of the kid and then it will
+            automatically schedule the vaccine date for days and months.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+    <div id="mobileFeature7">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/pharmacy.jpg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>DigiDoc Pharmacy</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              No need to run to the nearest pharmaceutical store to get your medicines.Purchase 100% genuine medicines from our in-house  authorised stores.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin:30px 0"></div>
+    </div>
+
+     <div id="mobileFeature8">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/ambulance.jpg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Ambulances</strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              No need to run to the nearest pharmaceutical store to get your medicines.Purchase 100% genuine medicines from our in-house  authorised stores.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 30px 0"></div>
+    </div>
+
+    <div id="mobileFeature9">
+      <div class="container-fluid text-center">
+        <img src="images/Home_Images/Services_Images/homeNurse.jpg" alt="Image of Symptoms Checker">
+      </div>
+      <div class=" container-fluid text-center" style="margin: 0px; padding: 0px;">
+        <div style="margin-top: 25px; margin-left: 5px;">
+          <h3 style="font-family: open sans,sans-serif; font-size: 25px; color: #DC1F26;"><strong>Homenurses and Physiotherapist on Demand
+          </strong></h3>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+         <div style="margin-top: 25px;">
+          <p style="font-family: open sans,sans-serif; font-size:17px;">
+              No need to run to the nearest pharmaceutical store to get your medicines.Purchase 100% genuine medicines from our in-house  authorised stores.
+          </p>
+        </div>
+      </div>
+      <div class="line" style="border-top-color: darkgray; margin: 0px 0"></div>
+    </div>
+
+
+  </div>
+</div>
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="logo.png">
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Symptoms Checker</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can test symptoms for himself or can enter the details of the user
+            whom he would like to test the symptoms.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="logo.png"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Ask For Appointment</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can ask for doctor appointment He can set date to request for
+            appointment with the doctor, if the doctor will be available in the set date
+            then the appointment will get fixed otherwise patient will be suggested to
+            make appointment dates under doctors availability dates.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+       <img src="logo.png"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Set Reminders</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can set the reminder for medicines prescribed by the Doctor.
+        </p>
+    </div>
+      
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img src="logo.png">
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Customer Care</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can make inquiry about general issues of the health using customer
+            support service.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="logo.png"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Chat with Specialist</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            Patient can ask health questions directly to the expert doctors. Online doctor
+            will give quick answers in a minute.
+        </p>
+    </div>
+    <div class="col-md-4 text-center">
+       <img src="logo.png"><br>
+        <p style="font-family: open sans,sans-serif; font-size: 30px; color: green;">Vaccination</p>
+        <p class="line" style="width: 100%"></p>
+        <p style="font-family: open sans,sans-serif; margin-left: 5px; font-size:17px; margin-top: -20px">
+            It is crafted especially for the parents to remember the important vaccination
+            dates and keep a track of the vaccination schedules for their newly born kids.
+            All they have to do is to set the birth date of the kid and then it will
+            automatically schedule the vaccine date for days and months.
+        </p>
+    </div>
+      
+  </div>
+</div>
+-->
+<!--Footer-->
+<footer id="footer" style="background-color: #04293D">
+  <div class="container-fluid"  >
+    <div id="footer-content-wrap" style="padding: 80px">
+      <div class="row" style="color: #eee; line-height: 1.5;">
+        <div class="col-sm-4" >
+          <h4 style=" text-transform: uppercase; letter-spacing: 2">Other Links</h4><br>
+                <p class="line w3-white"></p>
+                <!--<a href="">FAQ</a> |
+                <a href="">Contact Us</a> |
+                <a href="">Client Testimonials</a> |
+                <a href="">Sitemap</a> |
+                <a href="">Privacy Policy</a> |
+                <a href="">Terms & Conditions</a>-->
+              <ul style="color: #DC1F26; list-style: none;">
+				    <li><a href="" style="color: white;">FAQ</a></li>
+				    <li><a href="" style="color: white;">Contact Us</a></li>
+				    <li><a href="" style="color: white;">Client Testimonials</a></li>
+				    <li><a href="" style="color: white;">Sitemap</a></li>
+				    <li><a href="" style="color: white;">Privacy Policy</a></li>
+				    <li><a href="" style="color: white;">Terms & Conditions</a></li>
+				</ul>
+
+               
+                <br><br>
+                <h4 style=" text-transform: uppercase; letter-spacing: 2">Center Locator</h4><br>
+                <p class="line w3-white"></p>
+            <p style="margin-top: -20px;">Content Here<br>Some More Content<br>Some More Content<br></p>
+             
+         
+        </div>
+        <div class="col-sm-4">
+          <h4  style=" text-transform: uppercase; letter-spacing: 2">Contact Us</h4><br>
+                <p class="line w3-white"></p>
+            <p style="margin-top: 0px; ">Address Line 1<br>Address Line 2<br>Address Line 3<br>
+            	E-mail<br>Phone Number<br>	
+            </p>
+            <br>
+           
+            <br>
+            <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 4px">Newsletter</h4><br>
+                <p class="line w3-white"></p>
+            <form>
+              <input type="text" placeholder="Enter Your Email ID" style="border-radius: 5px; margin-bottom:10px; "><br>
+              <a href="https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w" type="submit" class="btn btn-danger">Subscribe</a>
+              <!--<input type="submit" value="Subscribe" style="border-radius: 5px; margin-bottom:10px; background-color:red;" onclick="location.href='https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w';">-->
+            </form>
+        </div>
+        <div class="col-sm-4">
+          
+            <h4 style=" text-transform: uppercase; letter-spacing: 2">What's New</h4><br>
+                 <p class="line w3-white"></p>
+                <p style="margin-top: -20px;"><marquee direction="up" scrolldelay="300">Get the first 5 checkups free<br>Link Aadhar Card to obtain 10% discount<br>
+                Corporate Registration earns upto 80% discount.</marquee></p>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 16px">Connect</h4><br>
+                 <p class="line w3-white"></p>
+                 <img src="images/Footer/Social_Media_Icons/footerFacebook.png" style="width: 50px;height: 50px">
+
+                 <img src="images/Footer/Social_Media_Icons/footerInstagram.jpg" style="width: 40px;height: 40px; margin-left: 10px">
+                 <img src="images/Footer/Social_Media_Icons/footerYoutube.png" style="width: 60px;height: 40px; margin-left:10px ">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!--End Footer for the Copyright Content-->
+<div id="copyright">
+  <div class="container-fluid" style="background: #000; margin-bottom: 0px; height: 100px; padding: 0px">
+    <div class="row" style="margin-right: 30px">
+      <p class="font-weight-normal" style="color: rgba(255,255,255,.25); margin-bottom: 0px; margin-left: 100px;">
+        <br>
+         Copyrights &copy; 2016 All Rights Reserved by DigiDoc.
+        <br>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

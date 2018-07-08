@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--To make Internet explorer choose the latest rendering engine-->
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width = device-width ,initial-scale = 1">
+	<title>BOOK AN APPOINTMENT</title>
+	 <link rel="stylesheet" type="text/css" href="Home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<style type="text/css">
+    body
+    {
+      background-image:url("pattern1.jpg");
+      width: 100%;
+      height: 100%; 
+    }
+    #leftIconManagement
+    {
+     
+    }
+    #backgroundImage
+    {
+     width: 100%;
+     height:100%;
+     background-image:url("pattern1.jpg");
+    }
+	.toRight
+	{
+	 padding-left:20px;
+	 font-family: lora;
+	 font-size: 20px;
+	}
+	.nav-link{
+		color: #04203D;
+	}
+	.nav
+	{
+     margin-top:60px; 
+     font-family: sans-serif;
+	}
+</style>
+<body>
+		<!--TOP Navigation bar : Nature : Sticky collapisble-->
+		<nav class="nav navbar navbar-expand-md navbar-light sticky-top" id="backgroundImage" style="margin-top: -100px;">
+		  <!-- Logo of digiDoc -->
+		  <a class="navbar-brand hideInitially" id="brandHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px;">DigiDoctor</a>
+		  <a class="navbar-brand" id="imageHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px; "><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\logo.png"></a>
+		  <!-- Toggler/collapsibe Button -->
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+	     
+		 <!-- NavigationBar links -->
+		  <div class="nav collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+		    <ul class="navbar-nav" id="navLinks">
+		      <li class="nav-item toRight"><a class="nav-link" href="Home.html" style="color:#04203D;"><strong>Home</strong></a></li>
+		      <li class="nav-item toRight"><a class="nav-link" href="aboutUs.html" style="color:#04203D;"><strong>About Us</strong></a></li>
+		      <li class="nav-item toRight"><a class="nav-link" href="Home.html#serviceRedirect" style="color:#04203D;"><strong>Services</strong></a></li>
+		      <li class="nav-item dropdown toRight">
+		      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:#04203D;"><strong>Buy a Plan</strong></a>
+		      <div class="dropdown-menu">
+		        <a class="dropdown-item" href="#" style="color:#04203D;">Health Package</a>
+		        <div class="dropdown-divider"></div>
+		        <a class="dropdown-item" href="#" style="color:#04203D;">Annual Membership</a>
+		        <div class="dropdown-divider"></div>
+		        <a class="dropdown-item" href="#" style="color:#04203D;">Corporate Health</a>
+		      </div>
+		    </li>
+		      <li class="nav-item toRight"><a class="nav-link" href="#footer" style="color:#04203D;"><strong>Contact Us</strong></a></li>
+		      <li class="nav-item toRight"><a class="nav-link" href="LoginForm.html" style="color:#04203D;"><strong>Login</strong></a></li>
+		    </ul>
+		  </div> 
+		</nav>
+    
+    <script>
+		window.onscroll = function() {scrollEffect()};
+		function scrollEffect() {
+			var element1=document.getElementById("imageHide");
+			var element2=document.getElementById("brandHide");
+			var element3=document.getElementById("backgroundImage");
+			var element4=document.getElementById("navLinks");
+		    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+		        element1.classList.add("hideImage");
+		        element2.classList.remove("hideBrand");
+		        element2.classList.remove("hideInitially");
+		        element3.classList.add("navbarHeightAdjust");
+		        element3.classList.add("navbarColorAdjust");
+		        element4.classList.add("navLinksAdjust");
+		        
+		    } else {
+		    	element1.classList.remove("hideImage");
+		    	element2.classList.add("hideBrand");
+		        element2.classList.remove("hideInitially");
+		        element3.classList.remove("navbarHeightAdjust");
+		        element4.classList.remove("navLinksAdjust");
+		    }
+		}
+	</script>
+
+	<!--Left Icons Content:All Bookings related to appointments and Lab Tests -->
+      <!--Shifted to a different Locations-->
+    <!--End of Left icons-->
+ 
+    <!--Right Icons:Social Media Handles-->
+     <div class="rightIcon">
+    	    <a href="http:\\www.facebook.com"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\facebook.png" width="30px"  height="34px"></a>
+     </div>
+     <div class="rightIcon"  style="padding-top:34px;">
+            <a href="http:\\www.youtube.com"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\youtube.png" width="30px" height="34px"></a>
+     </div>
+    <!--End of Right Icons-->
+    
+    <div>
+     <!--Image of a Team of Doctors-->
+     <img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\aboutUs\doctors.jpg" style="width:100%;" id="doctorImageResponsive">
+    </div> 
+
+    <!--Content for About us Page-->
+    <div class="container-fluid">
+    	<div class="dropdown dropright">
+     	<button type="button" class="btn btn-danger dropdown-toggle"  id="rotate" data-toggle="dropdown">
+	     <span class="glyphicon glyphicon-print"></span>
+	      Book
+	      your
+	      appointments
+	      here
+	    </button>
+     	 <div class="dropdown-menu" style="opacity:1;">
+		    	<a class="dropdown-item" id="sidebar" href="bookAnAppointment.html"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\bookAnAppointment.png" style="height:100px;"></a>
+		    	<a class="dropdown-item" id="sidebar" href="bookAHealthCheck.html"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\bookAHealthCheck.png" style="height:100px;"></a>
+		    	<a class="dropdown-item" id="sidebar" href="bookADiagnosticTest.html"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\pathologyButton.png" style="height:100px;"></a>
+		    	<a class="dropdown-item" id="sidebar" href="visitPatientPortal.html"><img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\visitPatientPortal.png" style="height:100px;"></a>
+     	 </div>
+        </div>
+ <!--   </div>  
+
+    <img src="C:\Users\shubham mathur\Desktop\Bootstrap Tutorials\images\home\bookAnAppointment.png" id="pageImageIndicator">
+    <br>
+ -->    
+    <!--Form for Booking information-->
+  <div class="container" style="margin-bottom: 20px; margin-top: -10%">
+  	<h4 style="color:#04203D; text-align: center; margin-left: -20px;">Book Your Appointment here</h4>
+      <hr class="underline" style="margin-left: 32% ; margin-right: 35%;">
+
+    
+    <form style="border: 1px solid black ;">
+      <div class="form-row">
+      	<div class=" col-md-2"></div>
+	    <div class="form-group col-md-4">
+	      <label for="inputFirstName">First Name</label>
+	      <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputLastName">Last Name</label>
+	      <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class=" col-md-2"></div>
+	    <div class="form-group col-md-4">
+	      <label for="inputEmail4">Email</label>
+	      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputPhoneNumber">Phone Number</label>
+	      <input type="Number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class=" col-md-2"></div>
+	    <div class="form-group col-md-4">
+	      <label for="inputCity">City</label>
+	      <input type="text" class="form-control" id="inputCity">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputState">State</label>
+	      <select id="inputState" class="form-control">
+	        <option selected>Choose : State</option>
+	        <option>Andhra Pradesh</option>
+			<option>Arunachal Pradesh</option>
+			<option>Assam</option>
+			<option>Bihar</option>
+			<option>Chhattisgarh</option>
+			<option>Delhi</option>
+			<option>Goa</option>
+			<option>Gujarat</option>
+			<option>Haryana</option>
+			<option>Himachal Pradesh</option>
+			<option>Jammu and Kashmir</option>
+			<option>Jharkhand</option>
+			<option>Karnataka</option>
+			<option>Kerala</option>
+			<option>Madhya Pradesh</option>
+			<option>Maharashtra</option>
+			<option>Manipur</option>
+			<option>Meghalaya</option>
+			<option>Mizoram</option>
+			<option>Nagaland</option>
+			<option>Odisha</option>
+			<option>Punjab</option>
+			<option>Rajasthan</option>
+			<option>Sikkim</option>
+			<option>Tamil Nadu</option>
+			<option>Telangana</option>
+			<option>Tripura</option>
+			<option>Uttar Pradesh</option>
+			<option>Uttarakhand</option>
+			<option>West Bengal</option>
+	      </select>
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="col-md-2"></div>
+		<div class="col-md-4">
+		 Gender : 
+		 <div class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+		  <label class="form-check-label" for="inlineRadio1">Male</label>
+		 </div>
+		 <div class="form-check form-check-inline">
+		  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+		  <label class="form-check-label" for="inlineRadio2">Female</label>
+		 </div>	
+		</div>
+		<div class="form-group col-md-4">
+	      <label for="inputDepartment">Department</label>
+	      <select id="inputState" class="form-control">
+	        <option selected>Choose : Department</option>
+	        <option>Gneral Physician</option>
+			<option>Paediatrician</option>
+			<option>Gynaecologist</option>
+			<option>Dentist</option>
+			<option>ENT</option>
+			<option>Psychiatrist</option>
+			<option>Dietician</option>
+			<option>Physiotherapist</option>
+			<option>Orthopaedic</option>
+			<option>Nephrologist</option>
+			<option>Neurologist</option>
+	      </select>
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class=" col-md-2"></div>
+	    <div class="form-group col-md-4">
+	      <label for="inputDate">Date</label>
+	      <input type="date" class="form-control" id="inputDate" placeholder="Date">
+	    </div>
+	    <div class="form-group col-md-4">
+	      <label for="inputTime">Time</label>
+	      <input type="time" class="form-control" id="inputTime" placeholder="Time">
+	    </div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="col-md-2"></div>
+	  	<div class="col-md-8">
+	  	 <label for="inputReason">Reason of Appointment</label>
+	      <input type="text" class="form-control" id="inputReason" placeholder="Reason of Appointment">	
+	  	</div>
+	  </div>
+	  <div class="form-row">
+	  	<div class="col-md-2"></div>
+	  	<div class="col-md-8">
+	  	 <label for="inputPastHistory">Past Medical History(if any)</label>
+	      <input type="text" class="form-control" id="inputPastHistory" placeholder="Past Medical History">	
+	  	</div>
+	  </div>
+	  <div class="form-row" style="margin-top: 20px; margin-bottom: 20px;">
+	  	<div class="col-md-5" style="margin-left: -2%;"></div>
+	    <button type="submit" class="btn btn-danger">Book your Appintment</button>
+	  </div>
+	</form>
+</div>
+  </div>
+
+
+<!--Google Play link to the application-->
+   <div class="container-fluid" style="background-color: black">
+   	<div style="background-color: black; height: 75px; margin-bottom: 0.05%">
+   		<div>
+   		 <img src="googlePlay.jfif" id="googlePlayIcon">
+   	   </div>
+    </div>
+   </div>
+
+
+   <!--Footer Infromation-->
+	<!--Footer-->
+<footer id="footer" style="background-color: #04293D">
+  <div class="container-fluid"  >
+    <div id="footer-content-wrap" style="padding: 80px">
+      <div class="row" style="color: #eee; line-height: 1.5;">
+        <div class="col-sm-4" >
+          <h4 style=" text-transform: uppercase; letter-spacing: 2">Other Links</h4><br>
+                <p class="line w3-white"></p>
+                <!--<a href="">FAQ</a> |
+                <a href="">Contact Us</a> |
+                <a href="">Client Testimonials</a> |
+                <a href="">Sitemap</a> |
+                <a href="">Privacy Policy</a> |
+                <a href="">Terms & Conditions</a>-->
+              <ul style="color: #DC1F26; list-style: none;">
+				    <li><a href="" style="color: white;">FAQ</a></li>
+				    <li><a href="" style="color: white;">Contact Us</a></li>
+				    <li><a href="" style="color: white;">Client Testimonials</a></li>
+				    <li><a href="" style="color: white;">Sitemap</a></li>
+				    <li><a href="" style="color: white;">Privacy Policy</a></li>
+				    <li><a href="" style="color: white;">Terms & Conditions</a></li>
+				</ul>
+
+               
+                <br><br>
+                <h4 style=" text-transform: uppercase; letter-spacing: 2">Center Locator</h4><br>
+                <p class="line w3-white"></p>
+            <p style="margin-top: -20px;">Content Here<br>Some More Content<br>Some More Content<br></p>
+             
+         
+        </div>
+        <div class="col-sm-4">
+          <h4  style=" text-transform: uppercase; letter-spacing: 2">Contact Us</h4><br>
+                <p class="line w3-white"></p>
+            <p style="margin-top: 0px; ">Address Line 1<br>Address Line 2<br>Address Line 3<br>
+            	E-mail<br>Phone Number<br>	
+            </p>
+            <br>
+           
+            <br>
+            <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 4px">Newsletter</h4><br>
+                <p class="line w3-white"></p>
+            <form>
+              <input type="text" placeholder="Enter Your Email ID" style="border-radius: 5px; margin-bottom:10px; "><br>
+              <input type="submit" value="Subscribe" style="border-radius: 5px; margin-bottom:10px; background-color:#4CAF50">
+            </form>
+        </div>
+        <div class="col-sm-4">
+          
+            <h4 style=" text-transform: uppercase; letter-spacing: 2">What's New</h4><br>
+                 <p class="line w3-white"></p>
+                <p style="margin-top: -20px;"><marquee direction="up" scrolldelay="300">Get the first 5 checkups free<br>Link Aadhar Card to obtain 10% discount<br>
+                Corporate Registration earns upto 80% discount.</marquee></p>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 16px">Connect</h4><br>
+                 <p class="line w3-white"></p>
+                 <img src="footerFacebook.png" style="width: 50px;height: 50px">
+
+                 <img src="footerInstagram.jpg" style="width: 40px;height: 40px; margin-left: 10px">
+                 <img src="footerYoutube.png" style="width: 60px;height: 40px; margin-left:10px ">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!--End Footer for the Copyright Content-->
+<div id="copyright">
+  <div class="container-fluid" style="background: #000; margin-bottom: 0px; height: 100px; padding: 0px">
+    <div class="row" style="margin-right: 30px">
+      <p class="font-weight-normal" style="color: rgba(255,255,255,.25); margin-bottom: 0px; margin-left: 100px;">
+        <br>
+         Copyrights &copy; 2016 All Rights Reserved by DigiDoc.
+        <br>
+      </p>
+    </div>
+  </div>
+</div>
+
+	<!--Footer Infromation ends-->
+
+</body>
+</html>

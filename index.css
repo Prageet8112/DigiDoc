@@ -1,0 +1,176 @@
+.navbar-brand {
+  padding: 0 0px;
+  height: -40px;
+  line-height: -20px;
+}
+
+.navbar-toggle{
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: -90px;
+  padding: 9px 10px !important;
+}
+
+.hideInitially
+{
+ display: none;
+}
+
+
+.hideBrand
+{
+ display: none;
+}
+
+.hideImage
+{
+ display: none;
+}
+
+#sidebar 
+{
+ width: 100px; 
+ /*position: fixed;*/ 
+ /*top: 170px;*/
+ margin: 0 0 0 0px;
+ z-index: 1000; 
+}
+
+.rightIcon
+ {
+    z-index: 12;
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 10%;
+    margin-top: 30%;
+}
+
+/*Media Quries for Bookings button*/
+@media screen and (min-width: 992px)
+{	
+	#rotate{
+	  margin-left: -9%;
+	  vertical-align:top;
+	  margin-top:170px;
+	  /*width:80px;height:30px;*/
+	  transform:rotate(7deg);
+	  -ms-transform:rotate(90deg); /* IE 9 */
+	  -moz-transform:rotate(90deg); /* Firefox */
+	  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+	  -o-transform:rotate(90deg); /* Opera */
+	}
+	.navbar {
+       max-height: 100px;
+   }
+   #pageImageIndicator{
+   	 height:100px;
+   	 width:100px; 
+   	 margin-left: 45%;
+   	 margin-top: -50px;
+   	 margin-bottom: 50px;
+   }
+   #googlePlayIcon{
+    	height: 40px;
+ 		margin-top: 1%;	
+   }
+   .navbarHeightAdjust{
+     max-height: 50px;
+   }
+   .navLinksAdjust{
+   	margin-top: -50px;
+   }
+   .underline{
+     border-width:3px;
+     align-self: center;
+     margin-top: -5px;
+     margin-right: 40%;
+     background-color:#04293D;
+     opacity: 0.7;
+   }
+}
+
+@media screen and (max-width: 992px)
+{	
+	#rotate{
+	  margin-left: -3%;
+	  vertical-align:top;
+	  /*margin-top:170px;*/
+	}
+	.navbar {
+       max-height: 600px;
+   }
+   #pageImageIndicator{
+   	 height:100px;
+   	 width:100px; 
+   	 margin-left: 35%;
+   	 margin-top: 10px;
+   }
+   #googlePlayIcon{
+    	height: 50px;
+ 		  margin-top: 2%;	
+   }
+   .underline{  
+   border-width:3px;
+   align-self: center;
+   margin-top: -5px;
+   margin-right: 25%;
+   background-color:#04293D;
+   opacity: 0.7;
+   }
+}
+
+
+/*Media Queries for Doctors image on the top*/
+@media screen and (min-width: 768px)
+{
+ #doctorImageResponsive
+ {
+  margin-top:6%; 
+ }
+}
+
+@media screen and (max-width: 768px)
+{
+ #doctorImageResponsive
+ {
+  margin-top:30%; 
+ }
+}
+
+/*Media Queries for all content*/
+@media screen and (min-width: 768px)
+{
+ #contentResponsive
+ {
+  margin-top: -2%;
+  margin-left: 4%;
+ }
+}
+
+@media screen and (max-width: 768px)
+{
+ #contentResponsive
+ {
+  margin-top: -1%;
+  margin-left: -1%;
+ }
+}
+
+/*Media Queries for aboutUsResponsive*/
+@media screen and (min-width: 768px)
+{
+ #aboutUsResponsive
+ {
+  margin-top: -14%;
+  margin-left: 4%;
+ }
+}
+
+@media screen and (max-width: 768px)
+{
+ #aboutUsResponsive
+ {
+  margin-top: -1%;
+  margin-left: -1%;
+ }
+}
