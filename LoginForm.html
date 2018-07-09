@@ -70,13 +70,13 @@
           <li class="nav-item toRight"><a class="nav-link" href="aboutUs.html" style="color:#04203D;"><strong>About Us</strong></a></li>
           <li class="nav-item toRight"><a class="nav-link" href="Home.html#serviceRedirect" style="color:#04203D;"><strong>Services</strong></a></li>
           <li class="nav-item dropdown toRight">
-          <a class="nav-link dropdown-toggle" href="host.html#pricing" id="navbardrop" data-toggle="dropdown" style="color:#04203D;"><strong>Buy a Plan</strong></a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:#04203D;"  ><strong>Buy a Plan</strong></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Health Package</a>
+            <a class="dropdown-item" href="#" style="color:#04203D;">Health Package</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Annual Membership</a>
+            <a class="dropdown-item" href="#" style="color:#04203D;">Annual Membership</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Corporate Health</a>
+            <a class="dropdown-item" href="#" style="color:#04203D;">Corporate Health</a>
           </div>
         </li>
           <li class="nav-item toRight"><a class="nav-link" href="#footer" style="color:#04203D;"><strong>Contact Us</strong></a></li>
@@ -145,19 +145,22 @@
 	<h4 style="color:#04203D; margin-left: 1%;">Login </h4>
       <hr class="underline" style="margin-left:1% ; margin-right: 92%; border-width: 2px; background-color: black; opacity: 1;">
      <div class="container w3-card w3-white" style="padding: 0; margin: 0; width: 40%; opacity: 0.8">
-     	<form style="padding-top: 50px">
+     	<form style="padding-top: 25px" method="POST" action="sendsms.php">
       <div class="form-row">
       	<div class=" col-md-1"></div>
+
 	    <div class="form-group col-md-5">
 	      <label for="inputUserName"><strong>Phone Number</strong></label>
-	      <input type="tel" pattern="\d{10}" class="form-control" id="inputUserName" placeholder="Enter Phone Number">
+	      <input type="tel" pattern="\d{10}" class="form-control" id="inputUserName" name="MOBILE" placeholder="Enter Phone Number">
 	    </div>
 	    <div class="col-md-4">
 
-	      <button type="submit" class="btn btn-danger" style="margin-top: 22%;margin-left: 30%">Generate OTP</button>
+	      <button type="submit" class="btn btn-danger" name="sendOTP" style="margin-top: 22%;margin-left: 30%">Generate OTP</button>
 	    </div>
 	    
 	  </div>
+	</form>
+	<form>
 	  <div class="form-row">
       	<div class=" col-md-1"></div>
 	    <div class="form-group col-md-5">
@@ -203,6 +206,15 @@
 	    </div>
    </div>
 
+
+<!--Google Play link to the application-->
+   <div class="container-fluid" style="background-color: black">
+   	<div style="background-color: black; height: 75px; margin-bottom: 0.05%">
+   		<div>
+   		 <img src="images/Footer/googlePlay.jfif" id="googlePlayIcon">
+   	   </div>
+    </div>
+   </div>
 
    <!--Footer Infromation-->
    <!--Footer-->

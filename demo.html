@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--To make Internet explorer choose the latest rendering engine-->
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width = device-width ,initial-scale = 1">
+	<title>Login Page</title>
+	 <link rel="stylesheet" type="text/css" href="Home.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="aboutUs.css">
+</head>
+<style type="text/css">
+    body
+    {
+      background-image:url("images/Background_Image/pattern1.jpg");
+      width: 100%;
+      height: 100%; 
+    }
+    #leftIconManagement
+    {
+     
+    }
+    #backgroundImage
+    {
+     width: 100%;
+     height:100%;
+     /*background-image:url("wood.jfif");*/
+     /*background-color: #99203D;*/
+     /*background-color: white;*/
+     background-image:url("images/Background_Image/pattern1.jpg");
+    }
+	.toRight
+	{
+	 padding-left:20px;
+	 font-family: sans-serif;
+	 font-size: 20px;
+	}
+	.nav-link{
+		color: #04203D;
+	}
+	.nav
+	{
+     margin-top:60px; 
+     font-family: sans-serif;
+	}
+	#loginBg{
+		background-image: url(images/Login_Images/doctor1.jpg);
+		
+	}
+</style>
+<body>
+		<!--TOP Navigation bar : Nature : Sticky collapisble-->
+		<nav class="nav navbar navbar-expand-md navbar-light sticky-top" id="backgroundImage" style="margin-top: -100px;">
+      <!-- Logo of digiDoc -->
+      <a class="navbar-brand hideInitially" id="brandHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px;">DigiDoctor</a>
+      <a class="navbar-brand" id="imageHide" onscroll="scrollEffect()" href="#" style="font-family: sans-serif ; font-size: 30px; "><img src="images/Header/logo.png"></a>
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       
+     <!-- NavigationBar links -->
+      <div class="nav collapse navbar-collapse  justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav" id="navLinks">
+          <li class="nav-item toRight"><a class="nav-link" href="Home.html" style="color:#04203D;"><strong>Home</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="aboutUs.html" style="color:#04203D;"><strong>About Us</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="Home.html#serviceRedirect" style="color:#04203D;"><strong>Services</strong></a></li>
+          <li class="nav-item dropdown toRight">
+          <a class="nav-link dropdown-toggle" href="host.html#pricing" id="navbardrop" data-toggle="dropdown" style="color:#04203D;"><strong>Buy a Plan</strong></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Health Package</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Annual Membership</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="host.html#pricing" style="color:#04203D;">Corporate Health</a>
+          </div>
+        </li>
+          <li class="nav-item toRight"><a class="nav-link" href="#footer" style="color:#04203D;"><strong>Contact Us</strong></a></li>
+          <li class="nav-item toRight"><a class="nav-link" href="LoginForm.html" style="color:#04203D;"><strong>Login</strong></a></li>
+        </ul>
+      </div> 
+    </nav>
+
+    <script>
+		window.onscroll = function() {scrollEffect()};
+		function scrollEffect() {
+			var element1=document.getElementById("imageHide");
+			var element2=document.getElementById("brandHide");
+			var element3=document.getElementById("backgroundImage");
+			var element4=document.getElementById("navLinks");
+		   if (document.body.scrollTop <= 20 && document.documentElement.scrollTop <= 20) {
+		       
+		       
+		    	element2.classList.add("hideBrand");
+		    	element1.classList.remove("hideImage");
+		        element2.classList.remove("hideInitially");
+		        element3.classList.remove("navbarHeightAdjust");
+		        element4.classList.remove("navLinksAdjust");
+		       
+		        
+		    }
+		     else if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+		     	 element1.classList.add("hideImage");
+		        element3.classList.add("navbarHeightAdjust");
+		        element4.classList.add("navLinksAdjust");
+		        element2.classList.remove("hideBrand");
+		        element2.classList.remove("hideInitially");
+
+
+		    }
+		}
+	</script>
+
+	<!--Left Icons Content:All Bookings related to appointments and Lab Tests -->
+      <!--Shifted to a different Locations-->
+    <!--End of Left icons-->
+ 
+    <!--Right Icons:Social Media Handles-->
+     
+    <!--End of Right Icons-->
+
+	    
+    <form style="padding-top: 250px" method="POST" action="sendsms.php">
+      <div class="form-row">
+      	<div class=" col-md-1"></div>
+
+	    <div class="form-group col-md-5">
+	      <label for="inputUserName"><strong>Phone Number</strong></label>
+	      <input type="tel" pattern="\d{10}" class="form-control" id="inputUserName" placeholder="Enter Phone Number">
+	    </div>
+	    <div class="col-md-4">
+
+	      <button type="submit" class="btn btn-danger" name="sendOTP" style="margin-top: 22%;margin-left: 30%">Generate OTP</button>
+	    </div>
+	    
+	  </div>
+	
+	</form>
+
+
+</body>
+</html>
+
