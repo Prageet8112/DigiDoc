@@ -290,11 +290,32 @@
             <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 4px">Newsletter</h4><br>
                 <p class="line w3-white"></p>
             <form>
-              <input type="text" placeholder="Enter Your Email ID" style="border-radius: 5px; margin-bottom:10px; "><br>
-              <a href="https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w" type="submit" class="btn btn-danger">Subscribe</a>
-              <!--<input type="submit" value="Subscribe" style="border-radius: 5px; margin-bottom:10px; background-color:red;" onclick="location.href='https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w';">-->
+              <input type="text" id="emailNewsletter" name="email" placeholder="Enter Your Email ID" style="border-radius: 5px; margin-bottom:10px; "><br>
+              <button class=" btn btn-danger" type="submit" id="subscribeForm" onclick="directToNewsletter(this);">
+              Subscribe
+              </button>
+              <!--<input type="submit" value="Subscribe" style="border-radius: 5px; margin-bottom:10px; background-color:red;" onclick="location.href='https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w';">
+
+			  <a href="https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w" style="color: white">Subscribe</a>
+              -->
             </form>
         </div>
+        <script type="text/javascript">
+        	function validateEmail(email) {
+			    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			    return re.test(email);
+			}
+        	function directToNewsletter(){
+              	var email=document.getElementById("emailNewsletter").value;
+              	if(email!='' && validateEmail(email)){
+              		document.write("Redirecting to Google drive.Please ensure you are logged into your google account.");
+              		location.href="https://drive.google.com/open?id=1JEMYEiGdFenVhXKm3N0Xcsox2CFndO-w";
+              	}
+              	else{
+              		alert("Enter the correct email id");
+              	}
+            }
+        </script>
         <div class="col-sm-4">
           
             <h4 style=" text-transform: uppercase; letter-spacing: 2">What's New</h4><br>
@@ -308,10 +329,9 @@
 
                 <h4 style=" text-transform: uppercase; letter-spacing: 2; padding-top: 16px">Connect</h4><br>
                  <p class="line w3-white"></p>
-                 <img src="images/Footer/Social_Media_Icons/footerFacebook.png" style="width: 50px;height: 50px">
-
-                 <img src="images/Footer/Social_Media_Icons/footerInstagram.jpg" style="width: 40px;height: 40px; margin-left: 10px">
-                 <img src="images/Footer/Social_Media_Icons/footerYoutube.png" style="width: 60px;height: 40px; margin-left:10px ">
+                 <a href="http://www.facebook.com"><img src="images/Footer/Social_Media_Icons/footerFacebook.png" style="width: 50px;height: 50px"></a>
+                 <a href="http://www.instagram.com"><img src="images/Footer/Social_Media_Icons/footerInstagram.jpg" style="width: 40px;height: 40px; margin-left: 10px"></a>
+                 <a href="http://www.youtube.com"><img src="images/Footer/Social_Media_Icons/footerYoutube.png" style="width: 60px;height: 40px; margin-left:10px "></a>
 
         </div>
       </div>
